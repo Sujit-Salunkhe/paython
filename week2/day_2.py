@@ -78,7 +78,56 @@
 # print(type(a))
 # a=["s","f","h","uy","w"]
 # a[1:3]=["sujit" ,"sujit3"]
+# # print(a)
+# a=["s","f","h","uy","w"]
+# a.insert(2,"sujit")
 # print(a)
-a=["s","f","h","uy","w"]
-a.insert(2,"sujit")
-print(a)
+# thislist = ["apple", "banana", "cherry"]
+# thislist.append("orange")
+# print(thislist)
+# a = ['apple', 'banana', 'cherry', 'orange']
+# b = ["sujit","fish","chiken","mutton"]
+# a.extend(b)
+# print(a)
+# a = ['apple', 'banana', 'cherry', 'orange']
+# a.remove("apple")
+# # print(a)
+# thislist = ["apple", "banana", "cherry"]
+# thislist.pop(2)
+# print(thislist)
+# import this
+
+
+# thislist = ["apple", "banana", "cherry"]
+# del thislist[1]
+# print(thislist)
+# for x in fruits:
+#     if "b" in x:
+#         newlist.append(x)
+# print(newlist)
+# # print(fruits)
+# fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+# newlist = []
+# newlist=[x for x in fruits if "b" in x ]
+# print(newlist)
+# b = "this, is,a,string"
+# a = b.split(",")
+# print(a)
+# c=("this is a string","hdbd")
+# d="-".join(c)
+# print(d)
+# # a="this is a string"
+# b=("this","is","a","string")
+# a = "-".join(b)
+# print(a)
+# a="this,is,a,string"
+# b=a.split(",")
+# print(b)
+# b=("this","is","a","string")
+# a = "-".join(b)
+# print(a)
+a="this is a string"
+b=a.split(" ")
+print(b)
+c= "-".join(a)
+print(c)
