@@ -1,5 +1,6 @@
 from cgi import print_arguments
 from msilib.schema import Condition
+from os import terminal_size
 
 
 # # if else Condition
@@ -101,4 +102,5 @@ from msilib.schema import Condition
 # sujit("apple")
 def plus(x):
    return  5 * x
+
 print(plus(5))
