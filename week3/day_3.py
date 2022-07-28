@@ -54,18 +54,29 @@
 #         print(555)
 #     elif a==56 and b==9:
 #         print(77)
+#     if a==b:
+#         print("1")
 #     else:
 #          print(a * b)
 # if z =="/":
-#     if a ==56 and b ==6:
+#     if a==b:
+#         print("1")
+#     elif a ==56 and b ==6:
 #         print(4)
 #     else:
 #         print(a / b)
 
-# if  z =="-":+
-#     print(a - b)
+# if  z =="-":
+#     if a==b:
+#         print("1")
+#     else:
+#         print(a - b)
 # if z=="+":
-#     print(a+b)
+#     if a==b:
+#         print("1")
+#     else:
+#         print(a+b)
+
 # print("thanks for using a calulater")
 # 
 
@@ -82,8 +93,8 @@
 #         break
 #     i = i+1
 #     print(i)
-# print("cong you came at 100")
 # n=13
+# print("cong you ca54me at 100")
 # print("you have to guess a number which i think. you have  only 4 guesses ")
 # a=int(input())
 # if a < 13:
@@ -156,6 +167,8 @@
 #             print("you won")
 #         if a !=13:
 #             print("you lost")
+cards=[13,9,8,7,5,4,3,2,1]
+print(len(cards))
 
 
 
