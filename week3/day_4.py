@@ -56,8 +56,9 @@ def locate_card(cards,query):
         if position==len(cards):
             return -1
 
-test=[{"input": {"cards":[13,45,85,69,789,78],"query":45}
-,"output":1}]
-print(locate_card("input","query"))
+input=[13,45,85,69,789,78,]
+query=90
+
+print(locate_card(input,query))
 
 
