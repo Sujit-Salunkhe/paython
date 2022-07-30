@@ -56,6 +56,8 @@ def first_position(number,target):
     def condition(mid):
 
         if number[mid]==target:
+            pass
+        
 
 
 
