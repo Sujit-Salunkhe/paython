@@ -57,12 +57,11 @@
 #             lo=mid+1
 #     return -1
 
-a=[1,2,3,3,5]
-z=max(a)
-while max(a)==z:
-    a.remove(max(a))
-print(max(a))
-li
+# a=[1,2,3,3,5]
+# z=max(a)
+# while max(a)==z:
+#     a.remove(max(a))
+# print(max(a))
 
 
     
