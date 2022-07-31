@@ -62,7 +62,9 @@
 # while max(a)==z:
 #     a.remove(max(a))
 # print(max(a))
-
+a=[[2,3],[6,7],[1,5]]
+a.sort(key=lambda x:x[1])
+print(a)
 
     
 
