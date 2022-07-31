@@ -33,8 +33,9 @@
 # print(y(2,3))
 # y=lambda a:a*5
 # print(y(2))
-def plus(a,b):
-    return a+b
+# def plus(a,b):
+#     return a+b
+
  
 
 
