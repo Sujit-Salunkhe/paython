@@ -1,4 +1,5 @@
 # we have to watch 24,25,26 of code with harry
+from functools import reduce
 from logging import exception
 import numbers
 from tokenize import Number
@@ -78,7 +79,15 @@ from click import secho
 #     s=y
 #     print(y)
 
-n={"a","b","c","d","e"}
-m={"a","c","d","f","h","z"}
-x=n.symmetric_difference(m)
-print("\n".join(sorted(x,key=int)))
+# n={"a","b","c","d","e"}
+# m={"a","c","d","f","h","z"}
+# x=n.symmetric_difference(m)
+# print("\n".join(sorted(x,key=int)))
+# def fibnomical(n):
+    
+#     for i in range(n):
+#         a=range(n)
+#         nums=reduce(lambda x,y:x+y,a)
+#         return nums
+        
+# print(fibnomical(5))

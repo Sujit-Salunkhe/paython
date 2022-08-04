@@ -41,6 +41,10 @@
 #     def names(abd):
 # sujit=marks("sujit",90)
 # sujit.names()
+from functools import reduce
+from mimetypes import init
+
+
 class person:
     def __init__(self,fname,lname):
         self.firstname=fname
@@ -60,7 +64,10 @@ class sujit(person):
 x=sujit("sujit","salunkhe",2020)
 x.all()
 # x.printname()   
-
+def fibnomical(n):
+    for i in range(n):
+        nums=reduce(lambda x,y:x +y,i)
+        print(nums)
 
 
 """
@@ -72,7 +79,12 @@ list =all the users of the platform,sorted by username
 
 
 """
-
+a=[1,2,3,4,5]
+b="string"
+print (str(a))
+print(repr(a))
+print (str(b))
+print(repr(b))
 class userdatabase:
     def insert(self,user):
         pass
@@ -80,5 +92,16 @@ class userdatabase:
         pass
     def update(self,user):
         pass
-    def listall(self):
-        pass
+    def list_all(self): 
+         pass
+class user:
+    def __init__(self,username,name,email):
+        self.username=username
+        self.name=name
+        self.email=email
+    def _repr_(self):
+        return "user(username='{}',name='{}',email='{}')".format(self.username,self.name,self.email)
+    def __str__(self):
+        return self._repr_()
+        
+
