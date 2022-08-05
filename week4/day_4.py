@@ -20,18 +20,17 @@
 # b="ashu"
 # print(a>b)
 
-"""
-creating a big data base for 100 millon users
-insert=the profile information for a new user.
-find=the profile information of a user given their usernames
-update=the profile information of  a user,given their username 
-list =all the users of the platform,sorted by username 
 
-
+# """
+# creating a big data base for 100 millon users
+# insert=the profile information for a new user.
+# find=the profile information of a user given their usernames
+# update=the profile information of  a user,given their username 
+# list =all the users of the platform,sorted by username 
 # """
 # class userdatabase:
 #     def __init__(self):
-#         self.user=[]
+#         self.user=[]git 
     
 
 #     def insert(self,user):
@@ -67,3 +66,13 @@ list =all the users of the platform,sorted by username
 #         print(x)
 #     printer()
 # fuc()
+# from collections import namedtuple
+
+# from python.week4.day_3 import sujit
+
+
+from collections import namedtuple
+
+
+a=namedtuple("sujit","vaishnav")
+a.__dict__
