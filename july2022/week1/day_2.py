@@ -6,3 +6,5 @@
 # s.add(2)
 # s1 =s.intersection({1,2,3})
 # print(len(s))
+from day_1 import sujit
+print(sujit(5))

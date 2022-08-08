@@ -76,3 +76,6 @@
 #         print("and also above 100")
 #     else:
 #        print("under 20") 
+def sujit(a):
+    return a**3
+    

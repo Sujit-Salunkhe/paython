@@ -13,7 +13,7 @@
 # from tkinter import N
 
 
-from locale import DAY_1
+# from locale import DAY_1, DAY_2
 
 
 mytuple = ("apple", "banana", "cherry")
@@ -95,7 +95,16 @@ mytuple = ("apple", "banana", "cherry")
 # sujit=numbers()
 # sujit2=iter(sujit)
 # for x in sujit2:
-#     print(x)
-f=open(DAY_1)
-content=f.read()
-print(content)
+# #     print(x)
+# f = open(DAY_2)
+# content=f.read()
+# print(content)
+
+# tuple=(9,4,5,6,7)
+# print (hash(tuple))
+# k=0
+# print(eval(3**4+3**4==k))
+import day_6 as sujit
+sujit.function("sujit")
+x=dir(sujit)
+print(x)
