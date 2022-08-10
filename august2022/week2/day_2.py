@@ -66,8 +66,56 @@
 #         while p<=a:
 #             print("@"*a)
 #             a -=1
-# a=digrams(int(input("how many lines you want\n")))
+# # a=digrams(int
+# for x in range(1,10):
+#     if x==3:
+#         continue
+# #     print(x)
+# list=[1,2,3,4,5,6,7,8,9]
+# p=0
+# while p < len(list):
+#         p +=1
+#         if p==2:
+#             continue
+#         print(list[p]) 
+from ntpath import join
+import textwrap
 
 
-    
+# n="sujitkfjkd"
+# # s="test"
+# a=2
+# # print("\n".join(textwrap.wrap(n,a)))
+# x="\n".join(textwrap.wrap(n,a))
+# print(x)
+# # n=7
+# print("hello".center(9,"-"))
+# n=7
+# m=21
+# # print(".|.".center(m,"-"))
+# n="sujit"
+# m=4
+# # print("\n".join(textwrap,wrap(n,m)))
+# x="\n".join(textwrap,wrap(n,m))
+# print(x)
+# x="sujit"
+# y=2
+# print((textwrap.wrap(x,y)))
+n=9
+m=27
+for x in range(1,n,2):
+    # x +=1
+    y=x*".|."
+    print(y.center(m,"-"))
+print("welcome".center(m,"-"))
+for x in range(n-2,-1,-2):
+    print("x:",x,"n:",n)
+    y=x*".|."
+    print(y.center(m,"-"))
+# a,b=map(int,input().split())
+# print(a)
+# # print(b)
+# for x in range(9,-1,-2):
+#     print(x)
+
 
