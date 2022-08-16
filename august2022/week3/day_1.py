@@ -64,3 +64,20 @@
 # # getattr 
 # sujit=(445,56,7,7,77,8,78,7,8)
 # print(hash(sujit))    
+
+def compareTriplets(a, b):
+    # Write your code here 
+    # i=0
+    x=[0,0]
+    for i in range(len(a)):
+        if a[i] < b[i]:
+            x[1] +=1
+
+        elif a[i]>b[i]:
+            x[0] +=1
+        
+    return x
+x=[17,28,30,30]
+y=[99,16,30,40]
+
+print(compareTriplets(x,y))
