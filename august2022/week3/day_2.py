@@ -18,12 +18,18 @@ class employee:
     def pprint(self):
         return f"name is {self.name} work hours is {self.work} hours"
 
+    @classmethod
+    def change_leaves(cls,newleaves):
+        cls.no_of_leaves=newleaves
+
 
 sujit=employee("sujit","devleper",8)
 ankit=employee("ankit","accountant",1)
-# print(sujit.__dict__) 
-print(sujit.__dict__)
-print(ankit.__dict__)
+# # print(sujit.__dict__)         
+# print(sujit.__dict__)
+# print(ankit.change_leaves)
+sujit.change_leaves(21)
+print(sujit.no_of_leaves)
 #     pass
 # sujit=employee()
 # anita=employee()
