@@ -42,16 +42,16 @@
 #     v= "{:.6f}\n{:.6f}\n{:.6f}" 
 #     print( v.format(len(plus)/len(a) ,len(minus)/len(a),len(z)/len(a)))
 # (hacker(a))
-# p
-def staircase(n):
-    p=1
-    while p <= n:
-        a="#" * p
-        print(a.rjust(n))
-        p +=1
-staircase(10)   
+# # p
+# def staircase(n):
+#     p=1
+#     while p <= n:
+#         a="#" * p
+#         print(a.rjust(n))
+#         p +=1
+# staircase(10)   
 # def stair(n)
-    # for x in
+#     for x in
 
 
 
