@@ -59,4 +59,15 @@
 # print("sujit is dangerous boy , he is very intelligent and smart boy")
         # 
 
+m=2
+d=36
+n=30
+while m < d:
+        print(m,d)
+        right=(("*" * ((d//2)-m)).rjust((n//2)+2))
+        left=(("*" * ((d//2)-m)))
+        print(right,left)
+        d -=2
+        m +=4
+
         
