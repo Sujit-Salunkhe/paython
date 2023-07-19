@@ -2,8 +2,8 @@
 # a=2
 # b=3
 # print(pow(a,b))
-# # print(a ** b)
-# print(3 ** 4)
+# print(a ** b)
+
 # print(81 % 5)
 # a=int(input())
 # b=int(input())
