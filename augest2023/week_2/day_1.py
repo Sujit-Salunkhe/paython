@@ -36,6 +36,20 @@ def sorting (l):
         (l[smallvalue],l[i]) = (l[i],[l[smallvalue]]) 
     p = [x for list in l for x in list]
     return (p)
-
 a=[2,4,89,67,1]
 print(sorting(a))
+def quicksort(arr):
+    if len(arr) <= 1:
+        return arr
+    
+    pivot = arr[len(arr) // 2]
+    left = [x for x in arr if x < pivot]
+    
+    middle = [x for x in arr if x == pivot]
+    right = [x for x in arr if x > pivot]
+    
+    return quicksort(left) + middle + quicksort(right)
+
+input_list = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5]
+sorted_list = quicksort(input_list)
+print(sorted_list)
