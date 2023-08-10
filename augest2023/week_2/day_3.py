@@ -25,20 +25,20 @@
 #     t +=1
 #     print(count)
 
-def sockMerchant(n, ar):
-    pairs = 0
-    for i in range(0, n):
-        matched = 0
-        for j in range(i+1, n):
-            if ar[i] == ar[j]:
-                matched+=1
-        pairs += matched%2
-    return pairs
+# def sockMerchant(n, ar):
+#     pairs = 0
+#     for i in range(0, n):
+#         matched = 0
+#         for j in range(i+1, n):
+#             if ar[i] == ar[j]:
+#                 matched+=1
+#         pairs += matched%2
+#     return pairs
 
-print(sockMerchant(6,[1,2,3,1,1,3]))
+# print(sockMerchant(6,[1,2,3,1,1,3]))
 # print(1%2)/
 
 
-    
+print( (7-4)>(7/2))
 # print(len(counting))
 # print((counting))
