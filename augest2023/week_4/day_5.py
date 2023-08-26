@@ -33,3 +33,4 @@ list(map(lambda i: x.update({i:len(s.split(i))-1}), set(s)))
 z = sorted(x.items(), key=lambda k : (-k[1],k[0]))
 for k,v in z[:3]:
     print(k,v)
+s=[1,5,6,6,8,4,1,4,1]
