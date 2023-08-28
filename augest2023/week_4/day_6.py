@@ -80,7 +80,17 @@
 
 # valid_substrings = [substring for substring in substrings if is_valid_substring(substring)]
 # print(valid_substrings)
-s="BANANA"
+import collections as cl
+n = 5
+m = 3
+edges = [[1,2],[1,3],[3,4]]
+s=1
+x = cl.defaultdict(list)
+for i in range(3):
+    x[edges[i][0]].append(edges[i][1])
+distance = [-1] * n 
+print(x,distance,cl.deque([n]))
+
 
 
 
