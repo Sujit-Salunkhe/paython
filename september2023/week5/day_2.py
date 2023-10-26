@@ -11,3 +11,7 @@ for i in range(len(scores)):
         minscores +=1
         min=scores[i]
 print(maxscore,minscores)
+
+
+x=9
+print(x)
