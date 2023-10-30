@@ -44,5 +44,14 @@ k=2
 s='ashley'
 t='ash'
 k=2
+oper=0
 for x in range(len(s)):
-    
+    if s == t:
+        pass
+    else:
+        s[:-1]
+        oper +=1
+print(oper)
+
+
+
