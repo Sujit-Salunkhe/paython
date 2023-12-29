@@ -42,7 +42,7 @@ class Treenode:
         return 'BinaryTree<{}>'.format(self.to_tuple())
     def __repr__(self):
         return 'BinaryTree<{}>'.format(self.to_tuple())
-        
+
     @staticmethod
     def parse_tuple(data):
         if isinstance(data,tuple) and len(data) == 3:
@@ -68,6 +68,11 @@ class Treenode:
 # right sides of nodes of route nodes
 # node0.right= node1
 # node1.right=node2
+# print((1,2,3))
+def makeatuple():
+    return 1,2,3
+
+print(makeatuple())
 
 # # left sides of nodes of route nodes
 
@@ -113,7 +118,7 @@ def display_Keys(node,space='/t',level=0):
     print(space*level + str(node.key))
     display_Keys(node.left,space,level+1)
 
-display_Keys(tree2,"  ")
+# display_Keys(tree2,"  ")
 
 def traverse_in_order(node):
     if node is None:
@@ -124,3 +129,19 @@ def tree_height(node):
     if node is None:
         return 0
     return 1 + max(tree_height(node.left),tree_height(node.right))
+
+def remove_none(nums):
+    return [x for x in nums if x is not None]
+
+def is_bst(node):
+    if node is None:
+        return True,None,None
+    is_bst_l,min_l,max_l = is_bst(node.left)
+    is_bst_r,min_r,max_r = is_bst(node.right)
+
+    is_bst_node = (is_bst_l and is_bst_r  and
+                   (max_l is None  or node.key > max_l) and (min_r is None  or node.key<min_r))
+    min_key  = min(remove_none([min_l,node.key,min_r]))
+    max_key  = max(remove_none([max_l,node.key,max_r]))
+
+    return is_bst_node,min_key,max_key
