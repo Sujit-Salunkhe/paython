@@ -44,74 +44,6 @@
 
 # print(database.list_all())
 # print(database.find('hemant'))
-
-
-class TreeNode:
-    def __init__(self,key):
-        self.key=key
-        self.left=None
-        self.right=None
-
-    def height(self):
-        if self is None:
-            return 0 
-        return 1 + max(TreeNode.height(self.left) + TreeNode.height(self.right))
-    
-    def traverse_in_order(self):
-        if self is None:
-             return []
-        return (TreeNode.traverse_in_order(self.left) + [self.key] + TreeNode.traverse_in_order(self.right))
-
-    def traverse_pre_order(self):
-        if self is None:
-             return []
-        return ([self.key] + TreeNode.traverse_pre_order(self.left) + TreeNode.traverse_pre_order(self.right))
-
-    def traverse_post_order(self):
-        if self is None:    
-             return []
-        return ( TreeNode.traverse_post_order(self.left) + TreeNode.traverse_post_order(self.right) + [self.key])
-
-    def display_Keys(self,space='\t',level = 0):
-        if self is None:
-            print(space*level + 'None')
-            return
-        
-        if self.left is None and self.right  is None:
-            print(space*level + str(self.key))
-            return 
-        TreeNode.display_Keys(self.right,space,level + 1)
-        print(space*level + str(self.key))
-        TreeNode.display_Keys(self.left,space,level+1)
-
-    def __str__(self) :
-            return 'BinaryTree<{}>'.format(self.to_tuple())
-    def __repr__(self):
-            return 'BinaryTree<{}>'.format(self.to_tuple())
-
-    def to_tuple(self):
-        if self is None:
-            return None
-        if self.right is None and self.left is None:
-            return self.key
-            
-        return  TreeNode.to_tuple(self.left),self.key,TreeNode.to_tuple(self.right)
-    
-    @staticmethod
-    def parse_tuple(data):
-        if isinstance(data,tuple) and len(data) == 3:
-            node = TreeNode(data[1])
-            node.left = parse_tuple(data[0])
-            node.right= parse_tuple(data[2])
-        
-        elif data is None:
-            node = None
-        else:
-            node = TreeNode(data)
-
-        return node
-
-
 tree_tuple =((1,3,None),2,((None,3,4),5,(6,7, 8)))
 def parse_tuple(data):
         if isinstance(data,tuple) and len(data) == 3:
@@ -176,4 +108,79 @@ def tree_size(node):
 
 
 
+class TreeNode:
+    def __init__(self,key):
+        self.key=key
+        self.left=None
+        self.right=None
 
+    def height(self):
+        if self is None:
+            return 0 
+        return 1 + max(TreeNode.height(self.left) + TreeNode.height(self.right))
+    
+    def traverse_in_order(self):
+        if self is None:
+             return []
+        return (TreeNode.traverse_in_order(self.left) + [self.key] + TreeNode.traverse_in_order(self.right))
+
+    def traverse_pre_order(self):
+        if self is None:
+             return []
+        return ([self.key] + TreeNode.traverse_pre_order(self.left) + TreeNode.traverse_pre_order(self.right))
+
+    def traverse_post_order(self):
+        if self is None:    
+             return []
+        return ( TreeNode.traverse_post_order(self.left) + TreeNode.traverse_post_order(self.right) + [self.key])
+
+    def display_Keys(self,space='\t',level = 0):
+        if self is None:
+            print(space*level + 'None')
+            return
+        
+        if self.left is None and self.right  is None:
+            print(space*level + str(self.key))
+            return 
+        TreeNode.display_Keys(self.right,space,level + 1)
+        print(space*level + str(self.key))
+        TreeNode.display_Keys(self.left,space,level+1)
+
+    def __str__(self) :
+            return 'BinaryTree<{}>'.format(self.to_tuple())
+    def __repr__(self):
+            return 'BinaryTree<{}>'.format(self.to_tuple())
+
+    def to_tuple(self):
+        if self is None:
+            return None
+        if self.right is None and self.left is None:
+            return self.key
+            
+        return  TreeNode.to_tuple(self.left),self.key,TreeNode.to_tuple(self.right)
+    
+    def remove_items(nums):
+         return [x for x in nums if x is not None ]
+    
+    @staticmethod
+    def parse_tuple(data):
+        if isinstance(data,tuple) and len(data) == 3:
+            node = TreeNode(data[1])
+            node.left = parse_tuple(data[0])
+            node.right= parse_tuple(data[2])
+        
+        elif data is None:
+            node = None
+        else:
+            node = TreeNode(data)
+
+        return node
+
+
+
+
+def goes_from_tree(node):
+    if node is None:
+          return []
+     
+    return (goes_from_tree(node.left) + [node.key] + goes_from_tree(node.right))
