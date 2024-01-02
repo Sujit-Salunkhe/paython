@@ -156,3 +156,81 @@ def insert(node,key,value):
         node.left = insert(node.left,key,value)
         node.left.parent = node
     return node
+
+
+def find(node,key):
+    if node is None:
+        return None
+    elif key == node.key:
+         return node
+    elif key < node.key:
+        return  find(node.left,key)
+    elif key < node.key:
+        return find(node.right.key)
+    
+def update(node,key,value):
+    target =find(node,key)
+    if target is not None:
+        target.value=value
+        
+def list_all(node):
+    if node is None:
+        return []
+    return (list_all(node.left) + [(node.key,node.value)] + list_all(node.right))
+
+
+print(list_all(tree4))
+
+def is_balanced(node):
+    if node is None:
+        return True,0
+    balanced_l,height_l = is_balanced(node.left)
+    balanced_r,height_r = is_balanced(node.right)
+    balance = balanced_r and balanced_l and abs(height_l - height_r) <= 1
+    height = 1 + max(balanced_r,balanced_l)
+    return balance , height
+
+def make_balanced_bst(data,lo=0,hi=None,parent = None):
+    if hi is None:
+        hi =  len(data) - 1
+    if lo > hi:
+        return None
+    
+    mid = (lo + hi) // 2
+    key,value = data[mid]
+    root = BSTNode(key,value)
+    root.parent = parent
+    root.left = make_balanced_bst(data,lo,mid-1,root)
+    root.right = make_balanced_bst(data,mid+1,hi,root)
+
+    return root
+
+
+def tree_size(node):
+    if node is None:
+        return 0
+    return 1 + tree_size(node.left) + tree_size(node.right)
+
+
+class TreeMap():
+    def __init__(self):
+        self.root = None
+
+    def __setitem__(self,key,value):
+        node = find(self.root,key)
+        if not node:
+            self.root = insert(self.root,key,value)
+            self.root = make_balanced_bst(self.root)
+        else:
+            update(self.root,key,value)
+
+    def __getitem__(self,key):
+        node = find(self.root,key)
+        return node.value if node else None
+    def __iter__(self):
+        return (x for x in list_all(self.root))
+    def __len__(self):
+        return  tree_size(self.root)
+    
+    def display(self):
+        return display_Keys(self.root)

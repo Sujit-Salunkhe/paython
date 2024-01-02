@@ -184,3 +184,4 @@ def goes_from_tree(node):
           return []
      
     return (goes_from_tree(node.left) + [node.key] + goes_from_tree(node.right))
+
