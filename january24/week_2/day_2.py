@@ -122,7 +122,7 @@ class Node:
 link1= Node(4)
 link1.insertAtend(34)
 
-print(link1)
+# print(link1)
 
 
 # class Node2: 
@@ -139,3 +139,93 @@ print(link1)
 # a.insertAtBeginning(3)
 
 # print(a.data)  # Accessing the value of head
+
+class LinkedList:
+    def __init__(self,nodes=None) :
+        self.head = None
+        if nodes is not None:
+            node = Node(nodes.pop(0))
+            self.head = node
+            for elem in nodes:
+                node.next = Node2(elem)
+                node = node.next 
+    
+    def __repr__(self) :
+        node = self.head
+        nodes = []
+        while node is not None:
+            nodes.append(node.data)
+            node = node.next
+        nodes.append("None")    
+        return "->".join(nodes)   
+    
+    def __iter__(self):
+        current = self.head
+        while current is not None:
+            print(current.data)
+            current = current.next
+
+    def add_first(self,data):
+        new_node = Node(data)
+        if self.head is None:
+            self.head = new_node
+        else:
+            new_node.next = self.head
+            self.head = new_node
+    
+    def add_last(self,data):
+        new_node= Node(data)
+        if self.head is None:
+            self.head = new_node
+        current = self.head
+        while current is not None:
+            current = current.next
+        current.next = new_node
+
+    def inserting_between(self,index,data):
+        new_node = Node(data)
+        if self.head is None:
+            return 
+        position = 0
+        current = self.head
+        if position == index:
+            self.add_first()
+
+        else:
+            while position + 1 == index and  current != None:
+                position +=1
+                current = current.next
+            if current is not None:
+                current.next = new_node
+                new_node.next = current.next.next
+            else:
+                print('index not found')
+
+    def remove_node(self,index):
+        position = 0
+        current = self.head
+        if index == 0:
+            self.head = self.head.next
+            # self.head = None
+        else:
+            while position != index and current is not None:
+                position +=1
+                current = current.next
+            if current is not None:
+                current.next = current.next.next
+            else:
+                print('index not found')
+class Node2:
+    def __init__(self,data) -> None:
+        self.data =data
+        self.next = None
+    def __repr__(self) :
+        return self.data
+    
+
+
+
+llist = LinkedList(['a','b','c','d','e','f'])
+print(llist)
+llist.remove_node(0)
+print(llist)
