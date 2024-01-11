@@ -212,7 +212,7 @@ class LinkedList:
                 position +=1
                 current = current.next
             if current is not None:
-                current.next = current.next.next
+                current.next = current.next.next 
             else:
                 print('index not found')
 class Node2:
