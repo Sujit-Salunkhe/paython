@@ -25,7 +25,6 @@ def bfc(graph,source):
     visited[source] = True 
     distance = [0]
     parent = [None]
-    # queue.append(source)
     i = 0
     while i < len(queue):
         current = queue(i)
@@ -36,8 +35,8 @@ def bfc(graph,source):
                 visited[v] = True  
                 distance.append(distance[current]+1)
                 parent.append(current) 
-                i +=1
-    return queue
+            i +=1
+    return queue 
 
 def dfs (graph,source):
     stack =[source]
@@ -56,7 +55,7 @@ def dfs (graph,source):
     # Write a function  program to find a shorts path in graphe
     # write a function to find a cycle path of a graphe
 
-sujit=[[2,3],[45,34,90],[873,23]]
+sujit=[[2,3],[45,34,90],[873,23]]  
 
 # a=sujit.pop()
 # print(sujit[a])
@@ -73,7 +72,7 @@ class Graph2:
                 self.weights[v1].append(w)
                 if not directed:
                     self.data[v2].append(v1)
-                    self.data[v2].append(w)
+                    self.data[v2].append(w) 
             else:
                 v1,v2 = e
                 self.data[v1].append(v2)
@@ -92,6 +91,6 @@ n = 6
 edges=[(0,1,4),(0,2,2),(1,2,5),(1,4,10),(2,5,3),(4,3,4),(3,5,11)]
 
 graphe2=Graph2(n,edges,directed=True)
-
+  
 print(graphe2)
 print(graphe2.data)
