@@ -22,15 +22,15 @@ data_list =[None] * 4096
 for item in data_list:
     assert item == None
 
-print(ord('i'))
+# print(ord('i'))
 
-def get_index(data_list,a_string):
-    result = 0
-    for a_character in a_string:
-        a_number = ord(a_character)
-        result += a_number
-    list_index = result % len(data_list)
-    return list_index
+# def get_index(data_list,a_string):
+#     result = 0
+#     for a_character in a_string:
+#         a_number = ord(a_character)
+#         result += a_number
+#     list_index = result % len(data_list)
+#     return list_index
 
 
 data_list[get_index(data_list,'sujit')] = ('sujit',4548978963)
